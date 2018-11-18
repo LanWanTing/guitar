@@ -1,0 +1,468 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1100">
+<meta name="keywords" content="J&amp;D 樂器購物網 | 此為校稿頁面">
+<meta name="description" content="J&amp;D 樂器購物網 | 此為校稿頁面">
+<title>J&D 樂器購物網 | 此為校稿頁面</title>
+<link href="favicon.ico" rel="icon">
+<link href="favicon.ico" rel="shortcut icon">
+<link href="apple-touch-icon.png" rel="apple-touch-icon">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/jquery.bxslider.css" rel="stylesheet">
+<link href="css/jquery.mCustomScrollbar.css" rel="stylesheet">
+<link href="css/colorbox.css" rel="stylesheet">
+<script src="js/plugins/jQuery/jquery-1.8.3.js"></script>
+<script src="js/plugins/jQuery/jquery.bxslider-4.1.1.min.js"></script>
+<script src="js/plugins/jQuery/jquery.fademover.js"></script>
+<script src="js/plugins/jQuery/jquery.mousewheel-3.0.6.min.js"></script>
+<script src="js/plugins/jQuery/jquery.mCustomScrollbar-3.0.2.min.js"></script>
+<script src="js/plugins/jQuery/jquery.colorbox-1.4.15.min.js"></script>
+<script src="js/common.js"></script>
+<script>
+jQuery(document).ready(function() {	
+	//相簿
+	var $mSEle = $(".cont").mCustomScrollbar();
+	jQuery('.gBxslider').bxSlider({
+		onSlideBefore: function($sEle, oldIndex, newIndex) {
+			$mSEle.mCustomScrollbar('scrollTo', '#bx-slide-' + newIndex);
+		},
+		onSliderLoad: function(currentIndex) {
+			 jQuery(".gBxslider .bx-wrapper").css({'max-width': '610px'});
+		 },
+		pagerCustom: '#bx-pager',
+		controls:true,
+		mode:'horizontal'
+	});
+  
+  // 頁籤
+  var $toggles = $('.toggle a'), $codes = $('.edit');
+  $toggles.on('click', function(e) {
+    e.preventDefault();
+    var $tEle = $(this);
+    if (!$tEle.hasClass('active')) {
+      $toggles.removeClass('active');
+      $tEle.addClass('active');
+      $codes.hide().filter(this.hash).show();
+    }
+  }).eq(0).trigger('click');
+  
+  // 彈出視窗
+  $('a.bigPic').colorbox({
+    title: true,
+    width: 460,
+    height:760,
+    scrolling: false,
+    onComplete: function() {
+      $('#bigPic').mCustomScrollbar({
+        scrollButtons: {
+         }
+      });
+    },
+  });
+});
+</script>
+</head>
+
+<body>
+<!--Header-->
+<header id="iHeader">
+	<div class="menu">
+    	<div class="logo"><a href="index.html" title="J&D 樂器購物網"><img src="images/logo.png" width="110" height="73" alt="J&D 樂器購物網"></a></div>
+        <div class="topNav">
+            <div class="search">
+            <form>
+              <input type="text" class="inTxt" placeholder="SEARCH">
+              <input type="submit" class="btnSearch" value="SEARCH">
+            </form>
+            </div>
+            <div class="nav shop"><a href="#">SHOPPING CAR ( <span>3</span> )</a></div>
+            <div class="nav member"><a href="#">MEMBER</a></div>
+            <div class="nav contact"><a href="#">CONTACT</a></div>
+            <div class="nav sitemap"><a href="#">SITEMAP</a></div>
+        </div>
+        <div class="menubox">
+        	<ul class="menuUl">
+            	<li class="menuLi"><a href="products.html" title="電吉他" class="mLink m1"></a>
+                   <div class="navSub">
+                      <div class="navSubBox">
+                        <!--ROCK-->
+                        <div class="navbox">
+                        <div class="title"><a href="products.html" title="ROCK GUITAR">ROCK GUITAR</a></div>
+                        <ul class="navUl">
+                            <li class="navLi"><a href="products.html" title="Great Master Series" class="link">Great Master Series</a></li> 
+                            <li class="navLi"><a href="products.html" title="Master Custom Series" class="link">Master Custom Series</a></li> 
+                            <li class="navLi"><a href="products.html" title="ST Series" class="link">ST Series</a></li>    
+                            <li class="navLi"><a href="products.html" title="JM Series" class="link">JM Series</a></li> 
+                            <li class="navLi"><a href="products.html" title="TL Series" class="link">TL Series</a></li>   
+                            <li class="navLi"><a href="products.html" title="80 Series" class="link">80 Series</a></li>
+                            <li class="navLi"><a href="products.html" title="90 Series" class="link">90 Series</a></li>
+                            <li class="navLi"><a href="products.html" title="DC Series" class="link">DC Series</a></li> 
+                            <li class="navLi"><a href="products.html" title="SG Series" class="link">SG Series</a></li>               
+                        </ul>
+                        </div>
+                        <!--JAZZ-->
+                        <div class="navbox">
+                        <div class="title"><a href="products.html" title="JAZZ GUITAR">JAZZ GUITAR</a></div>
+                        <ul class="navUl">
+                            <li class="navLi"><a href="products.html" title="DUKE Series" class="link">DUKE Series</a></li> 
+                            <li class="navLi"><a href="products.html" title="JAZZ Series" class="link">JAZZ Series</a></li>                
+                        </ul>
+                        </div>
+                        <!--BASS-->
+                        <div class="navbox">
+                        <div class="title"><a href="products.html" title="BASS GUITAR">BASS GUITAR</a></div>
+                        <ul class="navUl">
+                            <li class="navLi"><a href="product.html" title="BASS Series" class="link">BASS Series</a></li>               
+                        </ul>
+                        </div>
+                      </div>
+                   </div>
+              </li>
+              <li class="menuLi"><a href="products.html" title="木吉他" class="mLink m2"></a>
+              <div class="navSub">
+                      <div class="navSubBox">
+                      <!--ROCK-->
+                          <div class="navbox">
+                          <div class="title"><a href="products.html" title="古典吉他">古典吉他</a></div>
+                          <ul class="navUl">
+                              <li class="navLi"><a href="products.html" title="Great Master Series" class="link">Great Master Series</a></li> 
+                              <li class="navLi"><a href="products.html" title="Master Custom Series" class="link">Master Custom Series</a></li>              
+                          </ul>
+                          </div>
+                          <!--JAZZ-->
+                          <div class="navbox">
+                          <div class="title"><a href="products.html" title="民謠吉他">民謠吉他</a></div>
+                          <ul class="navUl">
+                              <li class="navLi"><a href="products.html" title="DUKE Series" class="link">DUKE Series</a></li> 
+                              <li class="navLi"><a href="products.html" title="JAZZ Series" class="link">JAZZ Series</a></li>                
+                          </ul>
+                          </div>
+                      </div>
+                   </div>
+                </li>
+                <li class="menuLi"><a href="products.html" title="烏克麗麗" class="mLink m3"></a></li>
+                <li class="menuLi"><a href="products.html" title="曼陀林" class="mLink m4"></a></li>
+                <li class="menuLi"><a href="products.html" title="斑鳩琴" class="mLink m5"></a></li>
+                <li class="menuLi"><a href="products.html" title="小提琴" class="mLink m6"></a></li>
+                <li class="menuLi"><a href="products.html" title="音樂配件" class="mLink m7"></a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<!--con-->
+<div id="pWrap" class="topLine">
+	<div id="pCont">
+    	<div id="pTitle">
+        	<div class="title">ROCK GUITAR</div>
+            <div class="link"><a href="index.html" title="首頁">HOME</a>&nbsp;&nbsp; &gt; &nbsp;&nbsp;<a href="products.html" title="ELECTRIC GUITARS">ELECTRIC GUITARS</a>&nbsp;&nbsp; &gt; &nbsp;&nbsp;<a href="products.html" title="ROCK GUITARS">ROCK GUITAR</a>&nbsp;&nbsp; &gt; &nbsp;&nbsp;<a href="products.html" title="Great Master Series">Great Master Series</a></div>
+        </div>
+        <div id="pMain">
+          <div id="proCon">
+          
+              <!--相簿-->
+              <div id="picGroup">
+              <div class="box">
+                
+                <ul class="gBxslider">
+                  <li><a href="images/pro/pro_b.png" class="bigPic" title=""><img src="images/pro/pro_b.png" width="370" height="610" alt=""></a></li>
+                  <li><a href="images/pro/pro_b1.jpg" class="bigPic" title=""><img src="images/pro/pro_b1.jpg" width="370" height="610" alt=""></a></li>
+                  <li><img src="images/pro/pro_b.png" width="370" height="610" alt=""></li>
+                  <li><img src="images/pro/pro_b1.jpg" width="370" height="610" alt=""></li>
+                  <li><img src="images/pro/pro_b.png" width="370" height="610" alt=""></li>
+                  <li><img src="images/pro/pro_b1.jpg" width="370" height="610" alt=""></li>
+                </ul>
+                <div id="bx-pager">
+                  <div class="cont">
+                    <a id="bx-slide-0" data-slide-index="0" href="#"><img src="images/pro/pro_s.png" width="80" height="130" alt=""></a>
+                    <a id="bx-slide-1" data-slide-index="1" href="#"><img src="images/pro/pro_s1.jpg" width="80" height="130" alt=""></a>
+                    <a id="bx-slide-2" data-slide-index="2" href="#"><img src="images/pro/pro_s.png" width="80" height="130" alt=""></a>
+                    <a id="bx-slide-3" data-slide-index="3" href="#"><img src="images/pro/pro_s1.jpg" width="80" height="130" alt=""></a>
+                    <a id="bx-slide-4" data-slide-index="4" href="#"><img src="images/pro/pro_s.png" width="80" height="130" alt=""></a>
+                    <a id="bx-slide-5" data-slide-index="5" href="#"><img src="images/pro/pro_s1.jpg" width="80" height="130" alt=""></a>
+                  </div>
+                </div>
+                
+              </div>
+              </div>
+              <!--END相簿-->
+              <!--說明-->
+              <div id="proInfo">
+              	<div class="title">J&D ROCK GUITARS 905 </div>
+                <div class="price">TWD 20,500</div>
+                <table>
+                	<tr>
+                      <th><span>產 品 類 型</span></th>
+                      <td>ELECTRIC GUITAR / ROCK GUITAR</td>
+                    </tr>
+                    <tr>
+                      <th><span>產 品 系 列</span></th>
+                      <td>90 Series</td>
+                    </tr>
+                    <tr>
+                      <th><span>產 品 型 號</span></th>
+                      <td>EG-RG90S-905</td>
+                    </tr>
+                    <tr>
+                      <th><span>顏&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;色</span></th>
+                      <td>
+                      <div class="colorBox select"><img src="images/color/pcolor01.jpg" width="40" height="10" alt="紅色"></div>
+                      <div class="colorBox"><img src="images/color/pcolor02.jpg"  width="40" height="10" alt="藍色"></div>
+                      <div class="colorBox"><img src="images/color/pcolor03.jpg"  width="40" height="10" alt="紫色"></div>
+                      <div class="colorBox"><img src="images/color/pcolor04.jpg"  width="40" height="10" alt="綠色"></div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th><span>數&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量</span></th>
+                      <td>
+                      <label for="quantity"></label>
+                      <select name="quantity" id="quantity" class="num">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th><span>說&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;明</span></th>
+                      <td>採用頂級赤楊木製造<br>榮獲台灣100 設計優等<br>精典質感深紅色<br>音色提升、品質更佳<br>可調式琴頸，可調整自己習慣的弦距高低<br>搭載穩定度高的油壓旋鈕，不易走音<br>出貨前皆有專業琴師調音檢查</td>
+                    </tr>
+                </table>
+                <a href="shop.html" title="加入購物車" class="btnShop"></a>
+              </div>
+              <!--END說明-->			  
+             </div>
+          </div>
+          <!--頁籤-->
+          <div id="proTab">
+            <div class="cf">
+              <ul class="toggle cf">
+                <li><a class="proTitle" href="#intro" title="商品介紹">商品介紹</a></li>
+                <li><a class="proTitle" href="#specification" title="商品規格">商品規格</a></li>
+                <li><a class="proTitle" href="#fabrics" title="材質介紹">材質介紹</a></li>
+                <li><a class="proTitle" href="#ask" title="常見問題">常見問題</a></li>
+              </ul>
+            </div>
+            <!-- 商品介紹 -->
+            <div id="intro" class="edit center">
+              <div class="tip">※   貼心小叮嚀 ：商品顏色的呈現會因不同電腦/手機/平板電腦等使用而造成些許色差問題，敬請見諒  ※</div>
+              <img src="images/pro/dm01.jpg" width="1000" height="620" alt="*">
+              <img src="images/pro/dm02.jpg" width="1000" height="620" alt="*">
+              <div class="tip red">※  購買前請詳閱【購物流程】、【付款方式】、【配送說明】。</div>
+            </div>
+            <!-- 商品規格-->
+             <div id="specification" class="edit">
+              <div class="specBox">
+              	<div class="specBox title">SPECIFICATION</div>
+                <div class="specBox list">
+                	<ul class="spec">
+                    <li>Neck：3pcs Canada Hard Maple</li>
+                    <li>Headstock：Gloss same color with body</li>
+                    <li>Neck Finish：Matt</li>
+                    <li>Machine Head：Sealed Die-cast type</li>
+                    <li>Fingerboard：Rosewood</li>
+                    <li>Body：Mahogany</li>
+                    <li>Veneer：Flamed Maple</li>
+                    <li>Binding：Natural</li>
+                    <li>Pickup：S-S-H, Black</li>
+                    <li>Bridge：TR-3</li>
+                    <li>String：D'Addario</li>
+                    <li>Neck Joint：Bolt-on</li>
+                    <li>Scale：648mm</li>
+                    <li>Color：RED / BLUE / GREEN / PURPLE</li>
+                    </ul>
+                </div>
+              </div>
+              <div class="pic"><img src="images/pro/specification.jpg" width="370" height="620" alt="電吉他結構"></div>
+            </div>
+            <!-- 商品材質-->
+            <div id="fabrics" class="edit center">
+              <img src="images/pro/fab01.jpg" width="1000" height="500" alt="桃花心木">
+              <img src="images/pro/fab02.jpg" width="1000" height="500" alt="鎳弦">
+            </div>
+            <!--常見問題-->
+            <div id="ask" class="edit">
+              <form>
+              <table class="fqabox">
+              	<tr>
+                  <td class="num"><span class="Q">Q：</span></td>
+                  <td class="title">嗨！請問是否有附贈吉他硬盒呢？還是要另外選購，可以推薦是合此吉他適用的的硬盒嗎？</td>
+                  <td class="name">吉他新手***</td>
+                </tr>
+                <tr>
+                  <td class="num"><span class="A">A：</span></td>
+                  <td class="title">你好！硬盒需要另外購買喔！該款示為電吉他，配件專區的電吉他硬盒皆適用喔！</td>
+                  <td class="name"></td>
+                </tr>
+                <tr>
+                  <td class="num"><span class="Q">Q：</span></td>
+                  <td class="title">嗨！請問是否有附贈吉他硬盒呢？還是要另外選購，可以推薦適合此吉他適用的的硬盒嗎？<br>另外紅色還有貨嗎？<br>如果要一次訂購20支吉他可以嗎？目前只能選到購買2支</td>
+                  <td class="name">吉他新手***</td>
+                </tr>
+                <tr>
+                  <td class="num"><span class="A">A：</span></td>
+                  <td class="title">你好！硬盒需要另外購買喔！該款示為電吉他，配件專區的電吉他硬盒皆適用喔！<br>紅色目前有現貨，如果要訂購20支吉他請您先訂購一支吉他，並於訂單備註上特別註明要訂購20支，我們將會指派專人與您接洽。</td>
+                  <td class="name"></td>
+                </tr>
+                <tr>
+                  <td class="num"><span class="Q">Q：</span></td>
+                  <td class="title">嗨！請問是否有附贈吉他硬盒呢？還是要另外選購，可以推薦是合此吉他適用的的硬盒嗎？</td>
+                  <td class="name">吉他高手***</td>
+                </tr>
+                <tr class="white">
+                  <td colspan="4" class="spec"><textarea></textarea></td>
+                </tr>
+                <tr class="white">
+                  <td colspan="4" class="right"><input type="submit" class="btn submit" value="" title="我要發問"></td>
+                </tr>
+              </table>
+              </form>
+            </div>
+            <!--END常見問題-->      
+          </div>
+          <!--END頁籤-->
+          <!--相關商品-->
+          <div id="proRecom">
+          	<div class="title"><img src="images/rp_title.png" alt="相關商品" width="203" height="18"></div>
+            <div class="probox">
+            	<ul>
+                	<li>
+                    <div class="pro">
+                      <div class="pic"><a href="products.html" title="M905"><img src="images/pro/rpro.jpg" alt="M905" width="180" height="320"></a></div>
+                      <div class="info">
+                      <div class="txt"><a href="products.html" title="M905">Rock Guitar <br> 90 Series <br> M905</a></div>
+                      <div class="price">TWD 20,000</div>
+                      <div class="color"><img src="images/color/color3.jpg" class="colorPic"><img src="images/color/color1.jpg" class="colorPic"><img src="images/color/color2.jpg" class="colorPic"><img src="images/color/color4.jpg" class="colorPic"></div>
+                      </div>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="pro">
+                      <div class="pic"><a href="products.html" title="M905"><img src="images/pro/rpro.jpg" alt="M905" width="180" height="320"></a></div>
+                      <div class="info">
+                      <div class="txt"><a href="products.html" title="M905">Rock Guitar <br> 90 Series <br> M905</a></div>
+                      <div class="price">TWD 20,000</div>
+                      <div class="color"><img src="images/color/color3.jpg" class="colorPic"><img src="images/color/color1.jpg" class="colorPic"><img src="images/color/color2.jpg" class="colorPic"><img src="images/color/color4.jpg" class="colorPic"></div>
+                      </div>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="pro">
+                      <div class="pic"><a href="products.html" title="M905"><img src="images/pro/rpro.jpg" alt="M905" width="180" height="320"></a></div>
+                      <div class="info">
+                      <div class="txt"><a href="products.html" title="M905">Rock Guitar <br> 90 Series <br> M905</a></div>
+                      <div class="price">TWD 20,000</div>
+                      <div class="color"><img src="images/color/color3.jpg" class="colorPic"><img src="images/color/color1.jpg" class="colorPic"><img src="images/color/color2.jpg" class="colorPic"><img src="images/color/color4.jpg" class="colorPic"></div>
+                      </div>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="pro">
+                      <div class="pic"><a href="products.html" title="M905"><img src="images/pro/rpro.jpg" alt="M905" width="180" height="320"></a></div>
+                      <div class="info">
+                      <div class="txt"><a href="products.html" title="M905">Rock Guitar <br> 90 Series <br> M905</a></div>
+                      <div class="price">TWD 20,000</div>
+                      <div class="color"><img src="images/color/color3.jpg" class="colorPic"><img src="images/color/color1.jpg" class="colorPic"><img src="images/color/color2.jpg" class="colorPic"><img src="images/color/color4.jpg" class="colorPic"></div>
+                      </div>
+                    </div>
+                    </li>
+                    <li>
+                    <div class="pro">
+                      <div class="pic"><a href="products.html" title="M905"><img src="images/pro/guitar02.jpg" alt="M905" width="180" height="320"></a></div>
+                      <div class="info">
+                      <div class="txt"><a href="products.html" title="M905">Rock Guitar <br> 90 Series <br> M905</a></div>
+                      <div class="price">TWD 20,000</div>
+                      <div class="color"><img src="images/color/color3.jpg" class="colorPic"><img src="images/color/color1.jpg" class="colorPic"><img src="images/color/color2.jpg" class="colorPic"><img src="images/color/color4.jpg" class="colorPic"></div>
+                      </div>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+          </div>
+          <!--END相關商品-->
+          <a href="products.html" title="返回列表"><div class="btnBack"></div></a>
+        </div>
+    </div>
+</div>
+
+<!--Footer-->
+<footer id="iFooter">
+	<div class="topbox"><a href="#pageTop" title="top" id="goTop"><div class="top"></div></a></div>
+    <div class="catalogbox">
+    	<div class="catalog">
+        	<div class="title">CORPORATE  INFO</div>
+            <div class="list">
+              <ul>
+                  <li><a href="company.html" title="公司簡介">公司簡介</a></li>
+                  <li><a href="brand.html" title="品牌介紹">品牌介紹</a></li>
+                  <li><a href="contact.html" title="聯絡我們">聯絡我們</a></li>
+                  <li><a href="news.html" title="新聞中心">新聞中心</a></li>
+                  <li><a href="sales.html" title="銷售通路">銷售通路</a></li>
+              </ul>
+            </div>
+        </div>
+        <div class="catalog">
+        	<div class="title">PRODUCTS</div>
+            <div class="list">
+              <ul>
+                  <li><a href="products.html" title="Electric Guitar">Electric Guitar</a></li>
+                  <li><a href="products.html" title="Acoustic Guitar">Acoustic Guitar</a></li>
+                  <li><a href="products.html" title="Ukulele">Ukulele</a></li>
+                  <li><a href="products.html" title="Mandolin ">Mandolin</a></li>
+                  <li><a href="products.html" title="Banjo">Banjo</a></li>
+                  <li><a href="products.html" title="Violin">Violin</a></li>
+                  <li><a href="products.html" title="Accessorie">Accessorie</a></li>
+              </ul>
+            </div>
+        </div>
+        <div class="catalog">
+        	<div class="title">CUSTOMER SERVICE</div>
+            <div class="list">
+              <ul>
+                  <li><a href="shop.html" title="購物車">購物車</a></li>
+                  <li><a href="member.html" title="會員專區">會員專區</a></li>
+                  <li><a href="process.html" title="購物流程">購物流程</a></li>
+                  <li><a href="pay.html" title="付款方式">付款方式</a></li>
+                  <li><a href="delivery.html" title="商品配送">商品配送</a></li>
+                  <li><a href="faq.html" title="常見問題">常見問題</a></li>
+              </ul>
+            </div>
+        </div>
+        <div class="catalog">
+        	<div class="title">INFORMATION</div>
+            <div class="list">
+              <ul>
+                  <li><a href="sitemap.html" title="網站總覽">網站總覽</a></li>
+                  <li><a href="privacy.html" title="隱私權政策">隱私權政策</a></li>
+                  <li><a href="terms.html" title="網站使用條款">網站使用條款</a></li>
+              </ul>
+            </div>
+        </div><div class="catalog last">
+        	<div class="title">FOLLOW  US</div>
+            <div class="list">
+              <ul>
+                  <li><a href="#" title="網站總覽">FACEBOOK</a></li>
+                  <li><a href="#" title="網站總覽">新浪微博</a></li>
+                  <li class="epaper">
+                  <div class="epaper">
+                    <form>
+                      <input type="text" class="inTxt" placeholder="請輸入Email訂閱電子報">
+                      <input type="submit" class="btnSearch" value="送出">
+                    </form>
+                  </div>
+                  </li>
+              </ul>
+            </div>
+        </div>
+    </div>
+    <div class="companybox">
+    <div class="logo"><a href="index.html" title="J&D樂器購物網"><img src="images/logo.png" width="57" height="40" alt="J&D"></a></div>
+    <div class="cominfo">地址：广东省惠州市惠阳区秋长镇桃源南路11号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电话：+86-752-6518860&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;传真：+86-752-6518861&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;邮箱：danny@worldsoundmusic.cn<br>Copyright © 宇声乐器（惠州）有限公司.All Rights Reserved   
+    <span><a href="http://www.tinalan.com/" title="Tina LAN Profile" target="_blank">Design By TINA LAN</a></span></div>
+    </div>
+</footer>
+
+</body>
+</html>

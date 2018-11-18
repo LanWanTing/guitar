@@ -1,0 +1,15 @@
+﻿/* ------------------------------------ Tips ------------------------------------ */
+#grnetWebTest { padding: 30px; overflow: hidden; text-align: center; line-height: 22px;}
+
+#colorbox { outline: 0;}
+#colorbox, #cboxOverlay, #cboxWrapper { position: absolute; top: 0; left: 0; z-index: 9999; overflow: hidden;}
+#cboxOverlay { position: fixed; width: 100%; height: 100%; background: #000;}
+#cboxMiddleLeft, #cboxBottomLeft { clear: left;}
+#cboxContent { position: relative; background: #000;}
+#cboxLoadedContent { overflow: auto; -webkit-overflow-scrolling: touch; border: 2px solid #000; background: #fff;}
+#cboxLoadingOverlay, #cboxLoadingGraphic { position: absolute; top: 0; left: 0; width: 100%; height: 100%;}
+#colorbox, #cboxContent, #cboxLoadedContent { box-sizing: content-box; -moz-box-sizing: content-box; -webkit-box-sizing: content-box;}
+#cboxLoadingGraphic { background: url(../images/website_loading.gif) no-repeat center center;}
+#cboxClose { display: block; position: absolute; top: 2px; right: 2px; margin: 0; padding: 0; overflow: hidden; width: 38px; height: 19px; text-indent: -9999px; background: url(../images/website_close.png) no-repeat 0 0; border: 0; cursor: pointer;}
+#cboxClose:active { outline: 0;}
+#cboxClose:hover { background-position: 0 bottom;}
